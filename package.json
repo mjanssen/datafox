@@ -2,11 +2,23 @@
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
   "homepage": "https://github.com/mjanssen/datafox",
+  "scripts": {
+    "build:main": "rollup -i ./src/index.js -c rollup.config.js"
+  },
   "dependencies": {
     "react": "16.1.1",
     "react-dom": "16.1.1",
-    "react-scripts": "1.0.10",
     "unfetch": "3.0.0"
   },
-  "version": "0.2.0"
+  "version": "0.2.0",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.55.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-uglify": "^3.0.0"
+  }
 }
