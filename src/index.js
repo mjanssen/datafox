@@ -4,33 +4,33 @@ import { get } from './fetch';
 
 export default data => Component => {
   return class extends React.Component {
-    data = {};
+    _data = {};
 
     constructor() {
       super();
-      data.map(url => this.data[url] = {});
+      data.map(url => this._data[url] = {});
     }
 
-    fetchData = () => {
+    _fetchData() {
       data.map(url => {
         if (typeof store[url] === 'undefined') {
           return get(url).then(result => {
-            this.data[url] = store[url] = result;
+            this._data[url] = store[url] = result;
             this.forceUpdate();
           });
         }
 
-        this.data[url] = store[url];
+        this._data[url] = store[url];
         this.forceUpdate();
       })
     }
 
     componentDidMount() {
-      this.fetchData();
+      this._fetchData();
     }
 
     render() {
-      return <Component {...this.data} />
+      return <Component {...this._data} />
     }
   }
 }
