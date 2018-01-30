@@ -1,7 +1,10 @@
 {
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
-  "homepage": "https://github.com/mjanssen/datafox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjanssen/datafox.git"
+  },
   "scripts": {
     "build:main": "rollup -i ./src/index.js -c rollup.config.js"
   },
@@ -10,7 +13,7 @@
     "react-dom": "16.1.1",
     "unfetch": "3.0.0"
   },
-  "version": "0.2.0",
+  "version": "0.2.1",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
