@@ -1,0 +1,12 @@
+{
+  "name": "datafox",
+  "description": "Datafox is a small decorator for fetching component data",
+  "homepage": "https://github.com/mjanssen/datafox",
+  "dependencies": {
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
+    "react-scripts": "1.0.10",
+    "unfetch": "3.0.0"
+  },
+  "version": "0.2.0"
+}
