@@ -2,6 +2,10 @@
 
 Datafox is a small (P)React decorator for fetching your API data, using a HOC.
 
+<a href="https://www.npmjs.org/package/datafox">
+  <img src="https://img.shields.io/npm/v/datafox.svg?style=flat" alt="npm">
+</a>
+
 ### Usage
 
 ```
