@@ -8,6 +8,7 @@ Datafox is a small (P)React decorator for fetching your API data, using a HOC.
 
 ### Usage
 
+#### (P)React
 ```
 import data from 'datafox';
 
@@ -21,3 +22,7 @@ class User extends Component {
 The above code makes the result from the `user` URL available in the `User` component. `this.props.user` will result in an object fetched from the API.
 
 Datafox makes sure the prop is initially set, so no `undefined` errors are returned if you add `this.props.user.name` in your render function.
+
+#### Vanilla classes
+
+Using datafox for vanilla classes is also possible
