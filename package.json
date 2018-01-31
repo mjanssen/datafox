@@ -1,7 +1,7 @@
 {
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": "mjanssen/datafox",
   "main": "lib/index.js",
   "files": [
