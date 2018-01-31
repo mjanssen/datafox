@@ -1,26 +1,27 @@
 import React from 'react';
-import store from './store';
 import { get } from './fetch';
 
-export default data => Component => {
+const store = {};
+
+export default _apiData => Component => {
   return class extends React.Component {
     _data = {};
 
     constructor() {
       super();
-      data.map(url => this._data[url] = {});
+      Object.keys(_apiData).map(k => this._data[k] = {});
     }
 
     _fetchData() {
-      data.map(url => {
+      Object.entries(_apiData).map(([k, url]) => {
         if (typeof store[url] === 'undefined') {
           return get(url).then(result => {
-            this._data[url] = store[url] = result;
+            this._data[k] = store[url] = result;
             this.forceUpdate();
           });
         }
 
-        this._data[url] = store[url];
+        this._data[k] = store[url];
         this.forceUpdate();
       })
     }
