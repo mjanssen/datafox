@@ -12,7 +12,7 @@ export default _apiData => Component => {
       Object.keys(_apiData).map(k => this._data[k] = {});
     }
 
-    _fetchData() {
+    fetchData() {
       Object.entries(_apiData).map(([k, url]) => {
         if (typeof store[url] === 'undefined') {
           return get(url).then(result => {
@@ -27,7 +27,7 @@ export default _apiData => Component => {
     }
 
     componentDidMount() {
-      this._fetchData();
+      this.fetchData();
     }
 
     render() {
