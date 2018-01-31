@@ -1,7 +1,7 @@
 {
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/mjanssen/datafox.git"
@@ -17,12 +17,10 @@
   },
   "scripts": {
     "build": "npm-run-all build:main build:vanilla",
-    "build:main": "rollup -i ./src/index.js -o ./lib/index.js -f cjs -c rollup.config.js",
-    "build:vanilla": "rollup -i ./src/vanilla.js -o ./lib/vanilla.js -f cjs -c rollup.config.js"
+    "build:main": "rollup -i ./src/index.js -o ./index.js -f cjs -c rollup.config.js",
+    "build:vanilla": "rollup -i ./src/vanilla.js -o ./vanilla.js -f cjs -c rollup.config.js"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "react": "16.1.1",
     "unfetch": "3.0.0"
   },
   "devDependencies": {
