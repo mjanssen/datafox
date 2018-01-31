@@ -25,4 +25,19 @@ Datafox makes sure the prop is initially set, so no `undefined` errors are retur
 
 #### Vanilla classes
 
-Using datafox for vanilla classes is also possible
+Using datafox for vanilla classes is also possible.
+
+```
+import data from 'datafox/vanilla';
+
+const user = '/api/users/1';
+
+@data({user})
+class SomeClass {
+  didRecieveData(data) {}
+}
+
+const someVar = new SomeClass();
+```
+
+`someVar.user` now contains the data coming from the api.
