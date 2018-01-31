@@ -4,6 +4,7 @@
 /node_modules
 
 /lib
+/public
 
 # testing
 /coverage
