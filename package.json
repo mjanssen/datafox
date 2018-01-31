@@ -1,6 +1,17 @@
 {
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
+  "version": "0.3.0",
+  "repository": "mjanssen/datafox",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "author": {
+    "name": "Marnix Janssen",
+    "email": "dev.marnix@gmail.com",
+    "url": "https://github.com/mjanssen"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mjanssen/datafox.git"
@@ -10,10 +21,8 @@
   },
   "dependencies": {
     "react": "16.1.1",
-    "react-dom": "16.1.1",
     "unfetch": "3.0.0"
   },
-  "version": "0.2.1",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
