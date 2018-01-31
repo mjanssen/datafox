@@ -1,7 +1,6 @@
 import React from 'react';
+import store from './store';
 import { get } from './fetch';
-
-const store = {};
 
 export default _apiData => Component => {
   return class extends React.Component {

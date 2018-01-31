@@ -2,7 +2,10 @@
   "name": "datafox",
   "description": "Datafox is a small decorator for fetching component data",
   "version": "0.3.1",
-  "repository": "mjanssen/datafox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjanssen/datafox.git"
+  },
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -12,14 +15,13 @@
     "email": "dev.marnix@gmail.com",
     "url": "https://github.com/mjanssen"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mjanssen/datafox.git"
-  },
   "scripts": {
-    "build:main": "rollup -i ./src/index.js -c rollup.config.js"
+    "build": "npm-run-all build:main build:vanilla",
+    "build:main": "rollup -i ./src/index.js -o ./lib/index.js -f cjs -c rollup.config.js",
+    "build:vanilla": "rollup -i ./src/vanilla.js -o ./lib/vanilla.js -f cjs -c rollup.config.js"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
     "react": "16.1.1",
     "unfetch": "3.0.0"
   },
@@ -29,6 +31,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "npm-run-all": "^4.1.2",
     "rollup": "^0.55.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-uglify": "^3.0.0"
