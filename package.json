@@ -18,8 +18,8 @@
   },
   "scripts": {
     "build": "npm-run-all build:main build:vanilla",
-    "build:main": "rollup -i ./src/index.js -o ./index.js -f cjs -c rollup.config.js",
-    "build:vanilla": "rollup -i ./src/vanilla.js -o ./vanilla.js -f cjs -c rollup.config.js"
+    "build:main": "rollup -i ./src/index.js -o ./index.js -f cjs -c rollup.config.js && gzip-size ./index.js",
+    "build:vanilla": "rollup -i ./src/vanilla.js -o ./vanilla.js -f cjs -c rollup.config.js && gzip-size ./vanilla.js"
   },
   "dependencies": {
     "unfetch": "3.0.0"
@@ -30,6 +30,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "gzip-size-cli": "^2.1.0",
     "npm-run-all": "^4.1.2",
     "rollup": "^0.55.1",
     "rollup-plugin-babel": "^3.0.3",
