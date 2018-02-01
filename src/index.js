@@ -9,7 +9,7 @@ export default _apiData => Component => {
       Object.keys(_apiData).map(key => {
         this._data[key] = {};
         if (store.has(key)) {
-          this._data[key] = stpre.get(key);
+          this._data[key] = store.get(key);
           return;
         }
         get(_apiData[key]).then(result => {
