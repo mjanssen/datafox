@@ -1,14 +1,29 @@
-## Datafox
-
-Datafox is a small (P)React decorator for fetching your API data, using a HOC.
+# Datafox
 
 <a href="https://www.npmjs.org/package/datafox">
   <img src="https://img.shields.io/npm/v/datafox.svg?style=flat" alt="npm">
 </a>
 
-### Usage
+Datafox is a small decorator for fetching your API data, asynchronously binding the data to your (P)React component or Javascript class.
 
-#### (P)React
+## Install
+
+```
+$ npm install --save datafox
+```
+
+## Features
+
+- Fetching data asynchronously
+- Binding api data to the `this.props`
+  - Triggering `componentDidUpdate()`
+- Binding data to class prototype (`this`)
+  - Triggering `didRecieveData()`
+- Using `unfetch` as polyfill, for browser support
+
+# Usage
+
+## (P)React
 ```
 import data from 'datafox';
 
@@ -23,7 +38,7 @@ The above code makes the result from the `user` URL available in the `User` comp
 
 Datafox makes sure the prop is initially set, so no `undefined` errors are returned if you add `this.props.user.name` in your render function.
 
-#### Vanilla classes
+## Vanilla classes
 
 Using datafox for vanilla classes is also possible.
 
@@ -41,3 +56,11 @@ const someVar = new SomeClass();
 ```
 
 `someVar.user` now contains the data coming from the api.
+
+## Demo
+
+An updated code demo can be found [here](https://stackblitz.com/edit/datafox-poc)
+
+## License
+
+[MIT](https://oss.ninja/mit/mjanssen/)
