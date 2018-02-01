@@ -1,14 +1,15 @@
 {
   "name": "datafox",
-  "description": "Datafox is a small decorator for fetching component data",
-  "version": "0.3.4",
+  "description": "Datafox is a small decorator for fetching your API data, asynchronously binding the data to your (P)React component or Javascript class.",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/mjanssen/datafox.git"
   },
   "main": "index.js",
   "files": [
-    "lib"
+    "index.js",
+    "vanilla.js"
   ],
   "author": {
     "name": "Marnix Janssen",
