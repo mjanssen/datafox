@@ -9,12 +9,19 @@ export default {
       exclude: 'node_modules/**'
     }),
     uglify({
+      output: { comments: false },
+      compress: {
+        keep_infinity: true,
+        pure_getters: true
+      },
+      warnings: true,
+      ecma: 5,
+      toplevel: 'cjs',
       mangle: {
-        toplevel: true,
         properties: {
           regex: /^_/,
-        },
-      },
-    }),
+        }
+      }
+    })
   ]
 };
