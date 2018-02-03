@@ -11,6 +11,11 @@
     "index.js",
     "vanilla.js"
   ],
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100
+  },
   "author": {
     "name": "Marnix Janssen",
     "email": "dev.marnix@gmail.com",
@@ -32,6 +37,8 @@
     "babel-preset-env": "^1.6.1",
     "gzip-size-cli": "^2.1.0",
     "npm-run-all": "^4.1.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "rollup": "^0.55.1",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-uglify": "^3.0.0"
