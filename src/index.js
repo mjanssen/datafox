@@ -1,6 +1,6 @@
-import React from "react";
-import { get } from "./fetch";
-import store from "./store";
+import React from 'react';
+import { get } from './fetch';
+import store from './store';
 
 export default _apiData => Component => {
   return class extends React.Component {
