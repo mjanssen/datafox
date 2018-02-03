@@ -14,16 +14,24 @@ $ npm install --save datafox
 
 ## Features
 
-- Fetching data asynchronously
-- Binding api data to the `this.props`
-  - Triggering `componentDidUpdate()`
-- Binding data to class prototype (`this`)
-  - Triggering `didRecieveData()`
-- Using `unfetch` as polyfill, for browser support
+* Fetching data asynchronously
+* Binding api data to the `this.props`
+  * Triggering `componentDidUpdate()`
+* Binding data to class prototype (`this`)
+  * Triggering `didRecieveData()`
+* Using `unfetch` as polyfill, for browser support
+
+## Size
+
+| Version   | Size |
+| --------- | ---- |
+| Component | 731B |
+| Vanilla   | 260B |
 
 # Usage
 
 ## (P)React
+
 ```
 import data from 'datafox';
 
