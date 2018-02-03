@@ -18,7 +18,7 @@ $ npm install --save datafox
 * Binding api data to the `this.props`
   * Triggering `componentDidUpdate()`
 * Binding data to class prototype (`this`)
-  * Triggering `didRecieveData()`
+  * Triggering `didReceiveData()`
 * Using `unfetch` as polyfill, for browser support
 
 ## Size
@@ -57,7 +57,7 @@ const user = '/api/users/1';
 
 @data({user})
 class SomeClass {
-  didRecieveData(data) {}
+  didReceiveData() { console.log(this.user) }
 }
 
 const someVar = new SomeClass();
